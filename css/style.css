@@ -1,0 +1,134 @@
+body{
+	background-image:url('bg.jpg');
+	
+	background-position: right-top;
+
+}
+
+ul{
+	list-style-type: none;
+
+	padding:5px;
+	overflow: hidden;
+	background-color: black;
+}
+
+li{
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+}
+li a:hover{
+	color:yellow;
+	background-color: purple;
+}
+
+a{
+	padding:4.6em;
+	color:white;
+	font-size: 2em;
+
+}
+#abb{
+	margin-left: 2em;
+	color:white;
+
+}
+table{
+	margin-left:auto;
+	margin-right: auto;
+	border:3px solid black;
+	border-collapse: collapse;
+	width: 70%;
+}
+.heading{
+	font-size: 4em;
+	font-family:sans-serif;
+	background-color: pink;
+	text-align: center;
+	color:blue;
+	margin: 20px 20px;
+;
+}
+#imgContainer{
+	width:800px;
+	height:400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#mainImg{
+	width:50%;
+	height:100%;
+}
+#innerContainer{
+	width: 400px;
+	height: 400px;
+	float:right;
+}
+.imgs{
+	width: 50%;
+	height: 50%;
+	float:left;
+}
+
+td{
+	padding:0.5em;
+	border:2px solid black;
+	border-collapse: none;
+	height: 2px;
+	font-family: arial;
+	background-color: grey;
+}
+th{
+	padding: 1em;
+	background-color: purple;
+	border:2px solid black;
+	color:yellow;
+	text-align: center;
+}
+#mfooter{
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	margin-left:18em;
+	margin-right:18em;
+}
+button{
+	color:red;
+	background-color: black;
+	margin-left:2em;
+}
+.text1{
+	border:5px inset white;
+	padding: 20px;
+	background-color: black;
+	color:white;
+	line-height: 2;
+	margin-left:2em;
+	width: 600px;
+	height: 400px;
+}
+#main{
+	color:black;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+#aa{
+	margin-left: 27px;
+	font-size: 1em;
+}
+#innertext{
+	width: 50%;
+	height: 50%;
+	float:right;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.feed
+{
+	color:white;
+	font-size: 2em;
+	margin-left: 28px;
+}

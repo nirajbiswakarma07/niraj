@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nested Table</title>
+	<style type="text/css">
+		#nestedTable{
+			  border-collapse: collapse;
+		}
+		#nestedTable td{
+			width: 50px;
+			height: 50px;
+			border: solid 1px black;
+			margin: 0;
+			padding: 0;
+		}
+		#popup{
+			position: fixed; 
+			border-color: black;
+			border-style: inset;
+			top: 20px; 
+			left: 400px; 
+			width: 400px; 
+			height: 400px; 
+			background-color: yellow; 
+			display: none; 
+			-webkit-box-shadow: 114px 35px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 114px 35px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 114px 35px 5px 0px rgba(0,0,0,0.75);
+		}
+		p{
+			color:purple;
+			font-size: 20px;
+		}
+#click{
+	margin:150px;
+	font-size: 2em;
+	border-style: inset;
+}
+#clickme{
+	color:red;
+	font-size: 1em;
+	border-style: outset;
+}
+
+#pop{
+	padding:200px;
+}
+
+
+	</style>
+</head>
+<body>
+<table id="nestedTable"></table><br>
+
+<button id="clickme" onclick="ShowPopup()">Click me!</button>
+
+<div id="popup">
+<p>OOOPSSSSS!!!!!!!!!!</p>
+<p>SORRY</p>
+<p>CLICK THE EXIT BUTTON TO CLOSE THE POP UP</p>
+<button id="click" onclick="CloseMe()">EXIT</button>
+</div>
+
+<script>
+	// var newTable= document.getElementById("nestedTable");
+
+	// var data=[]
+
+	// for (var i=0;i<10;i++)
+	// {
+	// 	var newRow=document.createElement("tr");
+	// 	newTable.appendChild(newRow);
+	// 	for (var j=0;j<10;j++)
+	// 	{
+	// 		var newCol=document.createElement("td");
+	// 		newRow.appendChild(newCol);
+	// 		data.push(newCol);
+	// 		if(i%2==0)
+	// 		{
+	// 			if(j%2!=0)
+	// 			{
+	// 			newCol.style.backgroundColor="white";
+	// 		}
+	// 		else
+	// 		{
+	// 			newCol.style.backgroundColor="black";
+	// 		}
+	// 		}
+	// 		else
+	// 		{
+	// 			if(j%2!=0)
+	// 			{
+	// 			newCol.style.backgroundColor="black";
+	// 		}
+	// 		else
+	// 		{
+	// 			newCol.style.backgroundColor="white";
+	// 		}
+				
+	// 		}
+
+
+	// 	}
+	// }
+setTimeout(ShowPopup,5000)
+function ShowPopup(){
+	document.getElementById("popup").style.display="block"
+}
+
+function CloseMe(){
+	document.getElementById("popup").style.display="none"
+
+
+}
+
+
+
+var table=document.getElementById("nestedTable");
+var data=[]
+
+for(var i=0;i<12;i++){
+	var row=document.createElement("tr");
+	table.appendChild(row);
+	for(var j=0;j<25;j++){
+		var col=document.createElement("td");
+		row.appendChild(col);
+		data.push(col);
+		// if((i+j)%2==0){
+		// 	col.style.backgroundColor="black";
+		// 		}
+		// else
+		// {
+		// 	col.style.backgroundColor="white"
+		// }
+	}
+}
+function AutoColor(){
+	var index=Math.floor(Math.random()*data.length);
+	var r=Math.floor(Math.random()*256);
+	var g=Math.floor(Math.random()*256);
+	var b=Math.floor(Math.random()*256);
+	data[index].style.backgroundColor="rgb("+r+","+g+","+b+")";
+	setTimeout(AutoColor,0)
+	
+}
+
+AutoColor()
+// function ChangeColor(){
+// 	var index=Math.floor(Math.random() * data.length);
+	
+// 	var r=Math.floor(Math.random() * 256);
+// 	var g=Math.floor(Math.random() * 256);
+// 	var b=Math.floor(Math.random() * 256);
+// 	data[index].style.backgroundColor = "rgb("+r+","+g+","+b+")";
+
+// //index++;
+// 	setTimeout(ChangeColor, 500);
+// }
+// ChangeColor()
+
+//console.log(Math.floor(Math.random() * 26))
+</script>
+</body>
+</html>
